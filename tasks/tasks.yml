@@ -1,0 +1,15 @@
+---
+
+- name: Install squid docker image
+  docker_container:
+    name: squid
+    image: "{{ docker_squid_image }}"
+    memory: 500M
+    ports:
+    - "3128:3128"
+    restart_policy: 'always'
+    network_mode: bridge
+    networks:
+      - name: bridge
+    purge_networks: yes
+

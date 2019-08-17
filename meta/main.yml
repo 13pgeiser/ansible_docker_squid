@@ -1,0 +1,14 @@
+galaxy_info:
+  role_name: ansible_docker_squid
+  author: Pascal Geiser
+  description: Install my squid docker image.
+  license: license MIT
+  min_ansible_version: 2.8
+  galaxy_tags:
+    - debian
+    - buster
+    - docker
+    - squid
+  dependencies:
+    - { name: 'ansible_docker', src: 'git+https://13pgeiser@github.com/13pgeiser/ansible_docker.git' }
+
