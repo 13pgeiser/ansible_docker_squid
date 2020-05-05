@@ -14,3 +14,10 @@
     purge_networks: yes
     networks_cli_compatible: yes
 
+- name: Restart squid a 3 in the morning
+  cron:
+    name: "restart_squid"
+    minute: "0"
+    hour: "3"
+    job: "docker restart squid"
+
